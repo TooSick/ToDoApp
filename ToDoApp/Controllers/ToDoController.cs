@@ -7,13 +7,13 @@ using ToDoApp.Domain.Interfaces;
 
 namespace ToDoApp.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
-    public class ToDoController : ControllerBase
+    public class ToDoListController : ControllerBase
     {
         private readonly IService<ToDoItem, ToDoFilter> _toDoService;
 
-        public ToDoController(IService<ToDoItem, ToDoFilter> toDoService)
+        public ToDoListController(IService<ToDoItem, ToDoFilter> toDoService)
         {
             _toDoService = toDoService;
         }

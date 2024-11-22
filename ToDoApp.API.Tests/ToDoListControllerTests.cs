@@ -9,12 +9,12 @@ using ToDoApp.Domain.Interfaces;
 
 namespace ToDoApp.API.Tests
 {
-    public class ToDoControllerTests
+    public class ToDoListControllerTests
     {
         private readonly Mock<IService<ToDoItem, ToDoFilter>> _serviceMock;
         private readonly ToDoController _controller;
 
-        public ToDoControllerTests()
+        public ToDoListControllerTests()
         {
             _serviceMock = new Mock<IService<ToDoItem, ToDoFilter>>();
             _controller = new ToDoController(_serviceMock.Object);
