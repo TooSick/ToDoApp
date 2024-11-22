@@ -1,21 +1,41 @@
+# ToDoApp
+
+## Запуска приложения
 Для запуска приложения необходимо поменять строки подключения в файле appsettings.json на свои.
-Доступные для использования методы:
-  GET /api/ToDoList/GetAllToDoItems
-  GET /api/ToDoList/GetToDoItemById/{id}
-  POST /api/ToDoList/CreateToDoItem
-  {
-    "title": "string",
-    "description": "string",
-    "dueDate": "2024-11-22T19:22:48.958Z",
-    "priority": Low,
-    "status": New
-  }
-  PUT /api/ToDoList/UpdateToDoItem/{id}
-  {
-    "title": "string",
-    "description": "string",
-    "dueDate": "2024-11-22T19:22:48.958Z",
-    "priority": Low,
-    "status": New
-  }
-  DELETE /api/ToDoList/DeleteToDoItem/{id}
+
+## Доступные для использования методы:
+
+### 1. **GET /api/ToDoList/GetAllToDoItems**
+Возвращает список задач.
+
+### 2. **GET /api/ToDoList/GetToDoItemById/{id}**
+Возвращает задачу по заданному ID.
+
+### 3. **POST /api/ToDoList/CreateToDoItem**
+Создает новую задачу.
+#### Пример тела запроса:
+```json
+{
+  "title": "string",
+  "description": "string",
+  "dueDate": "2024-11-22T19:22:48.958Z",
+  "priority": "Low",
+  "status": "New"
+}
+```
+
+### 4. **PUT /api/ToDoList/UpdateToDoItem/{id}**
+Обновляет задачу по заданному ID.
+#### Пример тела запроса:
+```json
+{
+  "title": "string",
+  "description": "string",
+  "dueDate": "2024-11-22T19:22:48.958Z",
+  "priority": "Low",
+  "status": "New"
+}
+```
+
+### 5. **DELETE /api/ToDoList/DeleteToDoItem/{id}**
+Удаляет задачу по заданному ID.
