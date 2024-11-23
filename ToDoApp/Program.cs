@@ -1,6 +1,7 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using ToDoApp.API.Validators;
+using ToDoApp.Application.AsyncDataServices;
 using ToDoApp.Application.Services;
 using ToDoApp.Domain.Entities;
 using ToDoApp.Domain.Filters;
@@ -31,6 +32,7 @@ builder.Services.AddScoped<IDatabaseConnection, SqlServerConnection>(provider =>
 });
 builder.Services.AddScoped<IRepository<ToDoItem, ToDoFilter>, ToDoRepository>();
 builder.Services.AddScoped<IService<ToDoItem, ToDoFilter>, ToDoService>();
+builder.Services.AddSingleton<IMessageBusClient<ToDoItem>, RabbitMqClient>();
 
 var app = builder.Build();
 

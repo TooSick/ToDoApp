@@ -13,11 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoApp.Domain", "ToDoApp.D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{423CD06A-F650-445A-B871-B588C0838ABE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp.Application.Tests", "ToDoApp.Application.Tests\ToDoApp.Application.Tests.csproj", "{53AF7554-9D0E-4475-9114-81E85F9C359A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoApp.Application.Tests", "ToDoApp.Application.Tests\ToDoApp.Application.Tests.csproj", "{53AF7554-9D0E-4475-9114-81E85F9C359A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp.Infrastructure.Tests", "ToDoApp.Infrastructure.Tests\ToDoApp.Infrastructure.Tests.csproj", "{0573E0C6-92C1-416A-A1DB-BED6791E2084}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoApp.Infrastructure.Tests", "ToDoApp.Infrastructure.Tests\ToDoApp.Infrastructure.Tests.csproj", "{0573E0C6-92C1-416A-A1DB-BED6791E2084}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp.API.Tests", "ToDoApp.API.Tests\ToDoApp.API.Tests.csproj", "{97C12D60-5CD5-484C-9043-A89A321EBA91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoApp.API.Tests", "ToDoApp.API.Tests\ToDoApp.API.Tests.csproj", "{97C12D60-5CD5-484C-9043-A89A321EBA91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

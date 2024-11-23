@@ -12,12 +12,12 @@ namespace ToDoApp.API.Tests
     public class ToDoListControllerTests
     {
         private readonly Mock<IService<ToDoItem, ToDoFilter>> _serviceMock;
-        private readonly ToDoController _controller;
+        private readonly ToDoListController _controller;
 
         public ToDoListControllerTests()
         {
             _serviceMock = new Mock<IService<ToDoItem, ToDoFilter>>();
-            _controller = new ToDoController(_serviceMock.Object);
+            _controller = new ToDoListController(_serviceMock.Object);
         }
 
         [Fact]

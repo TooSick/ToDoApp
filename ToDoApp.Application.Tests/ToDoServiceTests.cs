@@ -1,4 +1,5 @@
 using Moq;
+using ToDoApp.Application.AsyncDataServices;
 using ToDoApp.Application.Services;
 using ToDoApp.Domain.Entities;
 using ToDoApp.Domain.Enums;
@@ -10,12 +11,14 @@ namespace ToDoApp.Application.Tests
     public class ToDoServiceTests
     {
         private readonly Mock<IRepository<ToDoItem, ToDoFilter>> _mockRepo;
+        private readonly Mock<IMessageBusClient<ToDoItem>> _mockBus;
         private readonly ToDoService _toDoService;
 
         public ToDoServiceTests()
         {
             _mockRepo = new Mock<IRepository<ToDoItem, ToDoFilter>>();
-            _toDoService = new ToDoService(_mockRepo.Object);
+            _mockBus = new Mock<IMessageBusClient<ToDoItem>>();
+            _toDoService = new ToDoService(_mockRepo.Object, _mockBus.Object);
         }
 
         [Fact]
